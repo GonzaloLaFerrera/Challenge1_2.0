@@ -1,0 +1,240 @@
+body{
+    background: linear-gradient(#F3F5FC, #7df1ce, #0A3871 ) ;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.contenedores{
+    margin: 40px 20px;
+    height: 840px;
+    
+    /*Grid*/
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    gap: 20px;
+}
+
+.procesamiento{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.principal{
+    padding: 20px;
+}
+
+.info{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    margin-top: 100px;
+}
+
+.principal textarea{
+    resize: none;
+    border-style: none;
+    background-color: #F3F5FC;
+    box-shadow: 5px 5px 5px #cacdd1;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 32px;
+    color: #0A3871
+}
+
+textarea:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #0A3871;
+    font-weight: bold;
+}
+
+.botones{
+    width: 70%;
+	display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#boton_encriptar{
+    background: #0A3871;
+    color: #FFFFFF;
+    box-shadow: 3px 3px 2px #cacdd1;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+	border-radius: 24px;
+	cursor: pointer;
+    width: 50%;
+
+}
+
+#boton_desencriptar{
+    background: #D8DFE8;
+    color: #0A3871;
+    box-shadow: 3px 3px 2px #adadad;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+	border-radius: 24px;
+	cursor: pointer;
+    width: 50%;
+
+}
+
+#boton_encriptar:hover, #boton_desencriptar:hover{
+    background-color: lightsalmon;
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#boton_encriptar:active, #boton_desencriptar:active{
+    background-color: aquamarine;
+    transition: 0.3s;
+}
+
+.resultado{
+    background: #FFFFFF;
+    box-shadow: 5px 5px 5px #cacdd1;
+    border-radius: 32px;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto_sin_procesar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    /* display: none; */
+}
+
+/*Parte del Texto Ya Encriptado*/
+.texto_procesado {
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center; */
+}
+
+.texto_final{
+    background-color: #0A3871;
+    padding: 0 10px;
+    resize: none;
+    border-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 32px;
+    padding: 0 10px;
+}
+
+#boton_copiar{
+    background: #D8DFE8;
+    color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0A3871;
+	border-radius: 24px;
+	cursor: pointer;
+    width: 50%;
+}
+
+#boton_copiar:hover{
+    background-color: lightsalmon;
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#boton_copiar:active{
+    background-color: aquamarine;
+    transition: 0.3s;
+}
+
+
+
+
+/* CSS ANTIGUO
+body textarea{
+    resize: none;
+    border-style: none;
+    background-color: #F3F5FC;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0A3871
+}
+
+body textarea:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #0A3871;
+    font-weight: bold;
+}
+
+main .procesamiento{
+    width: 880px;
+    height: 944px;
+}
+
+main .resultado{
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 944px;
+}
+
+main .texto_procesado{
+    display: none;
+}
+
+main #muñeco{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 283px;
+}
+
+footer{
+    display: inline-block;
+}
+
+footer img{
+    width: 35px;
+}
+
+footer .copyright{
+    display: inline;
+    font-size: 12px;
+}
+*/

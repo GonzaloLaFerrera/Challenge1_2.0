@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+                    <!--CAMBIAR LOS INPUT BUTTON POR LA ETIQUETA <BUTTON>-->
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>"Encriptador"</title>
+        <!--<link ref="stylesheet" href="reset.css">-->
+        <link rel="stylesheet" href="encriptador_style2.0.css">
+        <script src="encriptador2.0.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="contenedores">
+            <div class="logo">
+                
+                <img src="imagenes/Logo.png">
+                        
+            </div>
+
+            <div class="procesamiento">
+                <div class="principal"> <!--Aquí va el box con el mensaje a encriptar-->
+                    <label for="mensaje"></label> 
+                    <textarea cols="50" rows="15" class= "mensaje" id="mensaje" placeholder="Ingrese el texto aquí"></textarea>
+                    <p class="info">&#128712 sólo letras minúsculas y sin acentos</p>
+                </div>
+                    
+                <div class="botones">
+                    <!-- <label for="boton_encriptar"></label>
+                    <button type="button" value="Encriptar" id="boton_encriptar" class="encriptar"> -->
+                    <button class="encriptar" id="boton_encriptar" onclick="boton_encriptacion()">Encriptar</button>
+                    <!-- <label for="boton_desencriptar"></label>
+                    <input type="button" value="Desencriptar" id="boton_desencriptar" class="desencriptar"> -->
+                    <button class="desencriptar" id="boton_desencriptar" onclick="boton_desencriptacion()">Desencriptar</button>
+                </div>
+            </div>
+                <!--Ambas div's deberían/podrían estar enmarcadas por un rectángulo sin borde, y q desaparez o aparezc el texto procesado dentro de ese rectangulo-->
+                <!--Habría q pensar en exhibir/ocultar dependiendo de si esta completo/procesado/boton encriptador, quizás con un true/false. Y pasar de una seccion a otra-->
+                
+            <div class="resultado">
+                <div class="texto_sin_procesar">
+                    <img src="imagenes/Muñeco.jpg" id="muñeco">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa aquí el texto que deseas encriptar o desencriptar</p>
+                    <!--<label for="texto_ingresado"></label>
+                    <input type="text" id="texto_ingresado" placeholder= "Ingresa aquí el texto que deseas encriptar o desencriptar">-->
+                </div>
+
+                <div class="texto_procesado">
+                    <!--quizas el texto procesado tenga que ser un <p> y no un textarea-->
+                    <label for="mensajeProcesado"></label> 
+                    <textarea class="texto_final" cols="30" rows="15" id="mensajeProcesado" disabled></textarea>
+                    <!-- <label for="boton_copiar"></label>
+                    <input type="button" value="Copiar" id="boton_copiar" class="copiar"> -->
+                    <button class="copiar" id="boton_copiar">Copiar</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <!--<footer>
+            
+            <img src="imagenes/logo_copyright.jpg">            
+            <p class="copyright">&copy Copyright Gonzalo La Ferrera - 2023</p>
+
+        </footer>-->
+
+    
+    </body>
+</html>
