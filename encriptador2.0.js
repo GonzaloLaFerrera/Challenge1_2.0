@@ -78,10 +78,9 @@ function desencriptado(texto_a_desencriptar){
 };
 
 function boton_copiado(){
-    const texto_copiado = document.querySelector(".texto_final");
-    texto_copiado.focus();
-    document.execCommand("selectAll");
-    document.execCommand("copy");
+    mensaje.select();
+    navigator.clipboard.writeText(mensaje.value)
+    /* mensaje.value = ""; (opción para borrar el contenido del output textArea una vez copiado al clipboard*/
     
     mensaje_copiadoClipboard.innerHTML = "Copiado al Portapapeles!";
     setTimeout(()=> mensaje_copiadoClipboard.innerHTML = '', 2000);
