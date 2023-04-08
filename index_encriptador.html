@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-                    <!--CAMBIAR LOS INPUT BUTTON POR LA ETIQUETA <BUTTON>-->
+                    
 <html lang="es">
     
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>"Encriptador"</title>
-        <!--<link ref="stylesheet" href="reset.css">-->
         <link rel="stylesheet" href="encriptador_style2.0.css">
-        <script src="encriptador2.0.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
@@ -30,38 +30,29 @@
                 </div>
                     
                 <div class="botones">
-                    <!-- <label for="boton_encriptar"></label>
-                    <button type="button" value="Encriptar" id="boton_encriptar" class="encriptar"> -->
                     <button class="encriptar" id="boton_encriptar" onclick="boton_encriptacion()">Encriptar</button>
-                    <!-- <label for="boton_desencriptar"></label>
-                    <input type="button" value="Desencriptar" id="boton_desencriptar" class="desencriptar"> -->
                     <button class="desencriptar" id="boton_desencriptar" onclick="boton_desencriptacion()">Desencriptar</button>
                 </div>
             </div>
-                <!--Ambas div's deberían/podrían estar enmarcadas por un rectángulo sin borde, y q desaparez o aparezc el texto procesado dentro de ese rectangulo-->
-                <!--Habría q pensar en exhibir/ocultar dependiendo de si esta completo/procesado/boton encriptador, quizás con un true/false. Y pasar de una seccion a otra-->
                 
             <div class="resultado">
-                <div class="texto_sin_procesar">
+                <div class="bloque_texto_sin_procesar">
                     <img src="imagenes/Muñeco.jpg" id="muñeco">
                     <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa aquí el texto que deseas encriptar o desencriptar</p>
-                    <!--<label for="texto_ingresado"></label>
-                    <input type="text" id="texto_ingresado" placeholder= "Ingresa aquí el texto que deseas encriptar o desencriptar">-->
+                    <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                    
                 </div>
 
-                <div class="texto_procesado">
+                <div class="bloque_texto_procesado oculto">
                     <!--quizas el texto procesado tenga que ser un <p> y no un textarea-->
                     <label for="mensajeProcesado"></label> 
                     <textarea class="texto_final" cols="30" rows="15" id="mensajeProcesado" disabled></textarea>
-                    <!-- <label for="boton_copiar"></label>
-                    <input type="button" value="Copiar" id="boton_copiar" class="copiar"> -->
-                    <button class="copiar" id="boton_copiar">Copiar</button>
+                    <button class="copiar" id="boton_copiar" onclick="boton_copiado()">Copiar</button>
+                    <span id="mensajeAlerta"></span>
                 </div>
             </div>
         </div>
 
-        
         <!--<footer>
             
             <img src="imagenes/logo_copyright.jpg">            
@@ -69,6 +60,6 @@
 
         </footer>-->
 
-    
-    </body>
+        <script src="encriptador2.0.js"></script>
+    </body>    
 </html>
